@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #ED3A4E;
+  --color-brand-primary-hover: #D92E42;
+  --color-brand-primary-dark: #B92035;
+  --color-brand-primary-light: #FFF1F3;
+  --color-color-black: #111111;
+  --color-color-charcoal: #1B1B1D;
+  --color-color-dark-gray: #333336;
+  --color-color-body: #5E6066;
+  --color-color-muted: #8A8D93;
+  --color-color-border: #E3E4E7;
+  --color-color-background: #FFFFFF;
+  --color-color-background-soft: #F6F7F8;
+  --color-color-background-dark: #111214;
+
+  --font-sans: 'Inter', 'Noto Sans', Arial, sans-serif;
+
+  --radius-small: 4px;
+  --radius-medium: 10px;
+
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+}
+
+@layer base {
+  :root {
+    --container-max: 1440px;
+    --section-space-desktop: 144px;
+    --section-space-mobile: 88px;
+    --header-height: 88px;
+    --transition-fast: 200ms;
+    --transition-default: 400ms;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans bg-color-background text-color-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-color-black font-bold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .section-padding {
+    @apply py-[var(--section-space-mobile)] md:py-[var(--section-space-desktop)];
+  }
+  .container-padding {
+    @apply px-5 md:px-8 lg:px-16;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 60s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
