@@ -15,7 +15,7 @@ export const companyData = {
   },
   whatsapp: "5531999551840",
   whatsappLink: "https://api.whatsapp.com/send/?phone=5531999551840&text=Ol%C3%A1%21+Vim+pelo+an%C3%BAncio+e+gostaria+de+conhecer+melhor+o+CADian%2C+software+CAD+compat%C3%ADvel+com+DWG+para+projetos+em+2D+e+3D.&type=phone_number&app_absent=0",
-  downloadUrl: "https://cadian.com.br/dowload/",
+  downloadUrl: "https://cadian.com.br/formulario-download/",
   businessHours: "Seg a Sex, 09h às 18h"
 };
 
