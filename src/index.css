@@ -36,10 +36,19 @@
   
   html {
     scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
   }
 
   body {
     @apply font-sans bg-color-background text-color-body antialiased;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
   h1, h2, h3, h4, h5, h6 {
